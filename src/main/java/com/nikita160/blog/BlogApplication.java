@@ -1,5 +1,6 @@
 package com.nikita160.blog;
 
+import com.nikita160.blog.models.Post;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
