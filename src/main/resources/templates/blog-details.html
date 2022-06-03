@@ -13,8 +13,10 @@
         <h1>Blog</h1>
         <div th:each="p : ${posts}" class="alert alert-info mt-2">
             <h3 th:text="${p.title}"></h3>
-            <p th:text="${#strings.abbreviate(p.fullText,50)}"></p>
-            <a th:href="'/blog/'+ ${p.id}">More</a>
+            <p th:text="${p.fullText}"></p>
+            <p th:text="${p.views}"></p>
+            <a th:href="'/blog/'+ ${p.id}+'/edit'" class="btn btn-warning">Edit</a>
+            <a th:href="'/blog/'+ ${p.id}+'/remove'" class="btn btn-warning">Remove</a>
         </div>
     </div>
 </main>

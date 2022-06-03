@@ -10,12 +10,13 @@
 
 <main>
     <div class="container mt-5">
-        <h1>Blog</h1>
-        <div th:each="p : ${posts}" class="alert alert-info mt-2">
-            <h3 th:text="${p.title}"></h3>
-            <p th:text="${#strings.abbreviate(p.fullText,50)}"></p>
-            <a th:href="'/blog/'+ ${p.id}">More</a>
-        </div>
+        <h1>New article</h1>
+        <div class="container mt-5 mb-5"></div>
+        <form action="/blog/add" method="post">
+            <input type="text" name="title" placeholder="Header" class="form-control"><br>
+            <textarea name="full_text" placeholder="Start posting..." class="form-control"></textarea><br>
+            <button type="submit" class="btn btn-warning">Submit</button>
+        </form>
     </div>
 </main>
 

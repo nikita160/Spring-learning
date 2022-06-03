@@ -16,9 +16,14 @@ public class Post {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String title, announce, full_text;
+    private String title, announce, fullText;
     private int views;
 
+    public Post() {
+    }
 
-
+    public Post(String title, String fullText) {
+        this.title = title;
+        this.fullText = fullText;
+    }
 }
